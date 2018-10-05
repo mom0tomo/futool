@@ -1,5 +1,5 @@
-- if モデル名.errors.any?
+- if @user.errors.any?
   .alert.alert-warning
     ul
-      - モデル名.errors.full_messages.each do |message|
+      - @user.errors.full_messages.each do |message|
         li= message

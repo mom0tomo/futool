@@ -1,0 +1,15 @@
+.row
+  .col-xs-offset-3.col-xs-6
+    .panel.panel-default
+      .panel-heading ログイン
+      .panel-body
+        = form_for(:session, url: login_path) do |form|
+          .form-group
+            = form.label :name, 'ユーザーID'
+            = form.text_field :name, class: 'form-control'
+          .form-group
+            = form.label :password, 'パスワード'
+            = form.password_field :password, class: 'form-control'
+          = form.submit 'Submit', class: 'btn btn-success btn-block'
+      .panel-footer
+        = link_to '→ 新規登録', signup_path

@@ -14,7 +14,11 @@ html
     /! Bootstrap JavaScript
     script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
   body
+    header.navbar
     .container
-      = render 'layouts/flash_messages'
-      = yield
+        = render 'layouts/flash_messages'
+        = render 'layouts/error_messages'
+
+        = yield
+
     = render 'layouts/footer'

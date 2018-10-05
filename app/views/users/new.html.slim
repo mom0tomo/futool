@@ -1,0 +1,17 @@
+.row
+  .col-xs-offset-3.col-xs-6
+    .panel.panel-default
+      .panel-heading ユーザー登録
+      .panel-body
+        = form_for(@user) do |form|
+          .form-group
+            = form.label :name, 'ユーザーID'
+            = form.text_field :name, class: 'form-control'
+          .form-group
+            = form.label :password, 'パスワード'
+            = form.password_field :password, class: 'form-control'
+          .form-group
+            = form.label :password_confirmation, 'パスワード（確認）'
+            = form.password_field :password_confirmation, class: 'form-control'
+          .text-right
+            = form.submit 'Submit', class: 'btn btn-success'
